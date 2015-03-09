@@ -28,11 +28,20 @@ body {
 textarea {
     font-family: Consolas, monaco, monospace;
 	font-size: 14px;
+    color: #666;
     background: #fafafa;
     width: 100%;
     resize: none;
-    padding: 14px;
+    padding: 14px 21px;
     display: block;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba(#2F323B, .1)
+    }
 }
 
 .clearfix {
@@ -44,9 +53,16 @@ textarea {
 
 .header {
     height: $header-height;
+    line-height: $header-height;
+    padding: 0 21px;
     border-bottom: 1px solid $border-color;
     background: #2F323B;
     color: #fff;
+}
+
+.app-title {
+    font-size: 27px;
+    font-weight: 300;
 }
 
 .main,
@@ -62,7 +78,7 @@ textarea {
     border-right: 1px solid $border-color;
 }
 
-.codeblock {
+.code-block {
     height: 50%;
     border-bottom: 1px solid $border-color;
 
@@ -76,10 +92,12 @@ textarea {
     }
 }
 
-.title {
+.code-title {
     border-bottom: 1px solid $border-color;
     padding: 21px;
     font-size: 14px;
     line-height: 1;
     font-weight: bold;
 }
+
+

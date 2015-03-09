@@ -16,11 +16,16 @@ html, body {
 textarea {
   font-family: Consolas, monaco, monospace;
   font-size: 14px;
+  color: #666;
   background: #fafafa;
   width: 100%;
   resize: none;
-  padding: 14px;
+  padding: 14px 21px;
   display: block; }
+  textarea::-webkit-scrollbar {
+    width: 5px; }
+  textarea::-webkit-scrollbar-thumb {
+    background: rgba(47, 50, 59, 0.1); }
 
 .clearfix:after {
   content: '';
@@ -28,9 +33,15 @@ textarea {
 
 .header {
   height: 64px;
+  line-height: 64px;
+  padding: 0 21px;
   border-bottom: 1px solid #e9e9e9;
   background: #2F323B;
   color: #fff; }
+
+.app-title {
+  font-size: 27px;
+  font-weight: 300; }
 
 .main, .side {
   display: block;
@@ -42,16 +53,16 @@ textarea {
 .side {
   border-right: 1px solid #e9e9e9; }
 
-.codeblock {
+.code-block {
   height: 50%;
   border-bottom: 1px solid #e9e9e9; }
-  .codeblock:last-child {
+  .code-block:last-child {
     border: 0; }
-  .codeblock textarea {
+  .code-block textarea {
     height: 100%;
     height: calc(100% - 57px); }
 
-.title {
+.code-title {
   border-bottom: 1px solid #e9e9e9;
   padding: 21px;
   font-size: 14px;
