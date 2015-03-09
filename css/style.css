@@ -15,14 +15,15 @@ html, body {
   background: #f6f7f6; }
 
 textarea {
-  font-family: Consolas, monaco, monospace;
-  font-size: 14px;
+  font-family: "Monaco", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  font-size: 10px;
   color: #666;
   background: #fff;
   width: 100%;
   resize: none;
   padding: 14px 21px;
-  display: block; }
+  display: block;
+  -webkit-font-smoothing: subpixel-antialiased; }
   textarea::-webkit-scrollbar {
     width: 5px; }
   textarea::-webkit-scrollbar-thumb {
