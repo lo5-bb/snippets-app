@@ -319,7 +319,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
   font-family: inherit;
   font-size: inherit;
   margin: 0;
-  white-space: pre-wrap;
+  white-space: pre;
   word-wrap: normal;
   line-height: inherit;
   color: inherit;
@@ -478,7 +478,7 @@ span.CodeMirror-selectedtext {
 
 .wrap {
   margin: 16px auto;
-  max-width: 1200px;
+  max-width: 1600px;
   padding: 0 12px; }
 
 .app {
