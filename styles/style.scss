@@ -23,13 +23,14 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     color: #555e65;
+    background: #f6f7f6;
 }
 
 textarea {
     font-family: Consolas, monaco, monospace;
 	font-size: 14px;
     color: #666;
-    background: #fafafa;
+    background: #fff;
     width: 100%;
     resize: none;
     padding: 14px 21px;
@@ -49,6 +50,15 @@ textarea {
         content: '';
         clear: both;
     }
+}
+
+.wrap {
+    height: 100%;
+    margin: 30px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #e6e6e6;
+    overflow: hidden;
 }
 
 .header {
