@@ -3,18 +3,19 @@
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
   height: 300px;
-  color: black;
-  font-family: Monaco, 'Andale Mono', 'Lucida Console', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
-  font-size: 11px;
+  font-family: 'Source Code Pro', Consolas, Monaco, 'Andale Mono', 'Lucida Console', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+  line-height: 1.25;
+  font-size: 13px;
+  color: #535353;
 }
 
 /* PADDING */
 
 .CodeMirror-lines {
-  padding: 4px 0; /* Vertical padding around content */
+  padding: 10px 0; /* Vertical padding around content */
 }
 .CodeMirror pre {
-  padding: 0 4px; /* Horizontal padding of content */
+  padding: 0 11px; /* Horizontal padding of content */
 }
 
 .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
@@ -24,16 +25,17 @@
 /* GUTTER */
 
 .CodeMirror-gutters {
-  border-right: 1px solid #ddd;
-  background-color: #f7f7f7;
+  border-right: 1px solid #e6e6e6;
+  background-color: #fbfbfb;
   white-space: nowrap;
 }
 .CodeMirror-linenumbers {}
+
 .CodeMirror-linenumber {
-  padding: 0 3px 0 5px;
-  min-width: 20px;
+  padding: 0 24px;
+  min-width: 21px;
   text-align: right;
-  color: #999;
+  color: #777;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
@@ -104,15 +106,15 @@ div.CodeMirror-overwrite div.CodeMirror-cursor {}
 .cm-s-default .cm-operator {}
 .cm-s-default .cm-variable-2 {color: #05a;}
 .cm-s-default .cm-variable-3 {color: #085;}
-.cm-s-default .cm-comment {color: #a50;}
-.cm-s-default .cm-string {color: #a11;}
+.cm-s-default .cm-comment {color: #949494;}
+.cm-s-default .cm-string {color: #d6494f;}
 .cm-s-default .cm-string-2 {color: #f50;}
-.cm-s-default .cm-meta {color: #555;}
+.cm-s-default .cm-meta {color: #807e7f;}
 .cm-s-default .cm-qualifier {color: #555;}
 .cm-s-default .cm-builtin {color: #30a;}
 .cm-s-default .cm-bracket {color: #997;}
-.cm-s-default .cm-tag {color: #170;}
-.cm-s-default .cm-attribute {color: #00c;}
+.cm-s-default .cm-tag {color: #326f9e;}
+.cm-s-default .cm-attribute {color: #4daee5;}
 .cm-s-default .cm-header {color: blue;}
 .cm-s-default .cm-quote {color: #090;}
 .cm-s-default .cm-hr {color: #999;}
@@ -157,6 +159,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
   position: relative;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+  background: #f8f8f8;
 }
 .CodeMirror-sizer {
   position: relative;
@@ -236,7 +239,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
   white-space: pre-wrap;
   word-wrap: normal;
   line-height: inherit;
-  color: inherit;
+  color: #000100;
   z-index: 2;
   position: relative;
   overflow: visible;
