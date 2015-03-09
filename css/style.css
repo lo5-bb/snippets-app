@@ -252,7 +252,17 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
 .CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
   position: absolute;
   z-index: 6;
-  display: none; }
+  display: none;
+  /* Handle */ }
+  .CodeMirror-vscrollbar::-webkit-scrollbar-track, .CodeMirror-hscrollbar::-webkit-scrollbar-track, .CodeMirror-scrollbar-filler::-webkit-scrollbar-track, .CodeMirror-gutter-filler::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px; }
+  .CodeMirror-vscrollbar::-webkit-scrollbar-thumb, .CodeMirror-hscrollbar::-webkit-scrollbar-thumb, .CodeMirror-scrollbar-filler::-webkit-scrollbar-thumb, .CodeMirror-gutter-filler::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(255, 0, 0, 0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
+  .CodeMirror-vscrollbar::-webkit-scrollbar-thumb:window-inactive, .CodeMirror-hscrollbar::-webkit-scrollbar-thumb:window-inactive, .CodeMirror-scrollbar-filler::-webkit-scrollbar-thumb:window-inactive, .CodeMirror-gutter-filler::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255, 0, 0, 0.4); }
 
 .CodeMirror-vscrollbar {
   right: 0;
