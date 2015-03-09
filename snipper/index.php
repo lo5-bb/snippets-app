@@ -5,7 +5,8 @@
   <body>
     <form action="example.html" metod="post">
       <textarea name="code">  
-      </textarea>
+      </textarea>'
+      <input type="submit" value="OK"/>
     </form>
     <div>
     <?php
