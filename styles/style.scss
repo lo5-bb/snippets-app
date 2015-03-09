@@ -1,4 +1,6 @@
-$header-height: 75px;
+$header-height: 64px;
+
+$border-color: #e9e9e9;
 
 //----------------------------
 
@@ -18,7 +20,19 @@ $header-height: 75px;
 html,
 body {
     height: 100%;
-    font-family: 'Opens Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #555e65;
+}
+
+textarea {
+    font-family: Consolas, monaco, monospace;
+	font-size: 14px;
+    background: #fafafa;
+    width: 100%;
+    resize: none;
+    padding: 14px;
+    display: block;
 }
 
 .clearfix {
@@ -30,7 +44,9 @@ body {
 
 .header {
     height: $header-height;
-    background: linear-gradient(90deg, #1A2980 10%, #26D0CE 90%);
+    border-bottom: 1px solid $border-color;
+    background: #2F323B;
+    color: #fff;
 }
 
 .main,
@@ -43,14 +59,27 @@ body {
 }
 
 .side {
-    border-right: 1px solid #e9e9e9;
+    border-right: 1px solid $border-color;
 }
 
 .codeblock {
     height: 50%;
-    border-bottom: 1px solid #e9e9e9;
+    border-bottom: 1px solid $border-color;
 
     &:last-child {
         border: 0;
     }
+
+    textarea {
+        height: 100%;
+        height: calc(100% - 57px);
+    }
+}
+
+.title {
+    border-bottom: 1px solid $border-color;
+    padding: 21px;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: bold;
 }
