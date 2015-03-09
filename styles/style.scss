@@ -1,3 +1,7 @@
+$header-height: 75px;
+
+//----------------------------
+
 * {
     border: 0;
     margin: 0;
@@ -5,8 +9,48 @@
     outline: 0;
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Opens Sans', sans-serif;
+}
+
+.clearfix {
+    &:after {
+        content: '';
+        clear: both;
+    }
+}
 
 .header {
-    height: 75px;
+    height: $header-height;
     background: linear-gradient(90deg, #1A2980 10%, #26D0CE 90%);
+}
+
+.main,
+.side {
+    display: block;
+    width: 50%;
+    float: right;
+    height: 100%;
+    height: calc(100% - #{$header-height});
+}
+
+.side {
+    border-right: 1px solid #e9e9e9;
+}
+
+.codeblock {
+    height: 50%;
+    border-bottom: 1px solid #e9e9e9;
+
+    &:last-child {
+        border: 0;
+    }
 }
