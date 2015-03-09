@@ -428,7 +428,8 @@ span.CodeMirror-selectedtext {
   background: #fff;
   border-radius: 4px;
   border: 1px solid #e6e6e6;
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.02); }
 
 .app-title {
   font-size: 18px;
@@ -461,4 +462,4 @@ span.CodeMirror-selectedtext {
   font-size: 12px;
   line-height: 1;
   font-weight: bold;
-  letter-spacing: 1px; }
+  letter-spacing: .5px; }
