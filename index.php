@@ -18,6 +18,7 @@
         <div class="app">
             <main class="main">
                 <div class="code-title">Podgląd kodu</div>
+                <iframe id="code-iframe" class="code-preview"></iframe>
             </main>
 
             <aside class="side">
@@ -37,6 +38,7 @@
     <script type="text/javascript" src="js/codemirror/mode/css/css.js"></script>
     <script type="text/javascript" src="js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
     <script type="text/javascript" src="js/codemirror/addon/scroll/simplescrollbars.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="js/site.js"></script>
 </body>
 </html>

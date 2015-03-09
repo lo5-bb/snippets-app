@@ -520,3 +520,9 @@ span.CodeMirror-selectedtext {
   line-height: 1;
   font-weight: bold;
   letter-spacing: .5px; }
+
+.code-preview {
+  width: 100%;
+  height: 100%;
+  display: block;
+  min-height: 500px; }
