@@ -4,7 +4,12 @@ div {
 	border-radius: 50%;
 	background: #00cc00;
 	float: left;
-	margin-right: 10px
+	margin-right: 10px;
+	line-height: 100px;
+	text-align: center;
+	color: #fff;
+	font-size: 50px;
+	text-transform: uppercase;
 }
 
 div:nth-child(2) {

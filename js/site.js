@@ -24,6 +24,8 @@ $(function(){
         $head.append($style);
     }
 
+    $head.append('<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">');
+
     console.info($body.length);
     console.info($head.length);
     console.info($style.length);
@@ -32,7 +34,7 @@ $(function(){
         var html = editorHtml.getValue();
         var css = editorCss.getValue();
 
-        $style.html(css);
+        $style.html('body{margin:20px;font-family:"Open Sans", sans-serif}'+css);
         $body.html(html);
     };
 
