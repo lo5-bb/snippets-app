@@ -6,7 +6,7 @@
 
     <div>
     <?php
-    readfile('example.html');
+    file_get_contents('example.html');
     ?>
     </div>
   </body>
