@@ -5,8 +5,9 @@
   <body>
 
     <div>
-    
-    
+    <?php
+    readfile('example.html');
+    ?>
     </div>
   </body>
 
