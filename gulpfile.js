@@ -7,21 +7,14 @@ var gulp            = require('gulp'),
 	connect         = require('gulp-connect'),
 	sass         	= require('gulp-sass');
 
-gulp.task('connect', function () {
-	connect.server({
-		root: ['.'],
-		port: 1234,
-		livereload: true
-	});
+gulp.task('watch', function () {
+	gulp.watch([ 'styles/**/*.scss'], ['sass']);
 });
 
-gulp.task('watch', function () {
-	gulp.watch([ 'src/styles/**/*.scss'], ['sass']);
-});
 
 // sass
 gulp.task('sass', function () {
-	return gulp.src('./styles/**/*.scss')
+	return gulp.src('styles/**/*.scss')
 		.pipe(sass({
 			onError: function (error) {
 				gutil.log(gutil.colors.red(error));
@@ -32,8 +25,7 @@ gulp.task('sass', function () {
 			}
 		}))
 		.pipe(autoprefixer())
-		.pipe(gulp.dest('./styles'))
-		.pipe(connect.reload());
+		.pipe(gulp.dest('./styles'));
 });
 
-gulp.task('serve', ['connect', 'sass', 'watch']);
+gulp.task('serve', ['sass', 'watch']);
