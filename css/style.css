@@ -252,17 +252,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
 .CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
   position: absolute;
   z-index: 6;
-  display: none;
-  /* Handle */ }
-  .CodeMirror-vscrollbar::-webkit-scrollbar-track, .CodeMirror-hscrollbar::-webkit-scrollbar-track, .CodeMirror-scrollbar-filler::-webkit-scrollbar-track, .CodeMirror-gutter-filler::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 10px; }
-  .CodeMirror-vscrollbar::-webkit-scrollbar-thumb, .CodeMirror-hscrollbar::-webkit-scrollbar-thumb, .CodeMirror-scrollbar-filler::-webkit-scrollbar-thumb, .CodeMirror-gutter-filler::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: rgba(255, 0, 0, 0.8);
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
-  .CodeMirror-vscrollbar::-webkit-scrollbar-thumb:window-inactive, .CodeMirror-hscrollbar::-webkit-scrollbar-thumb:window-inactive, .CodeMirror-scrollbar-filler::-webkit-scrollbar-thumb:window-inactive, .CodeMirror-gutter-filler::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(255, 0, 0, 0.4); }
+  display: none; }
 
 .CodeMirror-vscrollbar {
   right: 0;
@@ -424,6 +414,63 @@ div.CodeMirror-cursors {
 /* Help users use markselection to safely style text background */
 span.CodeMirror-selectedtext {
   background: none; }
+
+.CodeMirror-simplescroll-horizontal div, .CodeMirror-simplescroll-vertical div {
+  position: absolute;
+  background: #ccc;
+  box-sizing: border-box; }
+
+.CodeMirror-simplescroll-horizontal, .CodeMirror-simplescroll-vertical {
+  position: absolute;
+  z-index: 6;
+  background: #fff; }
+
+.CodeMirror-simplescroll-horizontal {
+  bottom: 0;
+  left: 0;
+  height: 7px; }
+
+.CodeMirror-simplescroll-horizontal div {
+  bottom: 0;
+  height: 100%; }
+
+.CodeMirror-simplescroll-vertical {
+  right: 0;
+  top: 0;
+  width: 7px; }
+
+.CodeMirror-simplescroll-vertical div {
+  right: 0;
+  width: 100%; }
+
+.CodeMirror-overlayscroll .CodeMirror-scrollbar-filler, .CodeMirror-overlayscroll .CodeMirror-gutter-filler {
+  display: none; }
+
+.CodeMirror-overlayscroll-horizontal div, .CodeMirror-overlayscroll-vertical div {
+  position: absolute;
+  background: #bcd; }
+
+.CodeMirror-overlayscroll-horizontal, .CodeMirror-overlayscroll-vertical {
+  position: absolute;
+  z-index: 6; }
+
+.CodeMirror-overlayscroll-horizontal {
+  bottom: 0;
+  left: 0;
+  height: 6px; }
+
+.CodeMirror-overlayscroll-horizontal div {
+  bottom: 0;
+  height: 100%; }
+
+.CodeMirror-overlayscroll-vertical {
+  right: 0;
+  top: 0;
+  width: 6px; }
+
+.CodeMirror-overlayscroll-vertical div {
+  right: 0;
+  width: 100%; }
 
 .clearfix:after {
   content: '';

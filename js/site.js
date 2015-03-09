@@ -1,9 +1,11 @@
 var editor1 = CodeMirror.fromTextArea(document.getElementById('code-html'), {
     lineNumbers: true,
-    mode:  "htmlmixed"
+    mode:  "htmlmixed",
+    scrollbarStyle: "simple"
 });
 
 var editor2 = CodeMirror.fromTextArea(document.getElementById('code-css'), {
     lineNumbers: true,
-    mode:  "css"
+    mode:  "css",
+    scrollbarStyle: "simple"
 });

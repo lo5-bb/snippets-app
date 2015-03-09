@@ -36,6 +36,7 @@
     <script type="text/javascript" src="js/codemirror/mode/xml/xml.js"></script>
     <script type="text/javascript" src="js/codemirror/mode/css/css.js"></script>
     <script type="text/javascript" src="js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script type="text/javascript" src="js/codemirror/addon/scroll/simplescrollbars.js"></script>
     <script type="text/javascript" src="js/site.js"></script>
 </body>
 </html>
