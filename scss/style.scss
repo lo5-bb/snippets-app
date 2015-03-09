@@ -27,7 +27,7 @@ body {
 }
 
 textarea {
-    font-family: "Monaco", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    font-family: Consolas, "Courier New", Courier, monospace;
 	font-size: 10px;
     color: #666;
     background: #fff;
@@ -45,6 +45,8 @@ textarea {
         background: rgba(#2F323B, .1)
     }
 }
+
+@import 'codemirror';
 
 .clearfix {
     &:after {

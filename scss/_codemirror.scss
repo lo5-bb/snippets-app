@@ -2,9 +2,10 @@
 
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
-  font-family: monospace;
   height: 300px;
   color: black;
+  font-family: Monaco, 'Andale Mono', 'Lucida Console', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+  font-size: 11px;
 }
 
 /* PADDING */
@@ -232,7 +233,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
   font-family: inherit;
   font-size: inherit;
   margin: 0;
-  white-space: pre;
+  white-space: pre-wrap;
   word-wrap: normal;
   line-height: inherit;
   color: inherit;
