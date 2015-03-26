@@ -24,11 +24,11 @@
             <aside class="side">
                 <section class="code-block">
                     <div class="code-title">HTML</div>
-                    <textarea id="code-html"><?= htmlspecialchars(file_get_contents('demo/index.html')) ?></textarea>
+                    <textarea id="code-html"><?= htmlspecialchars(file_get_contents('snippets/1/1/index.html')) ?></textarea>
                 </section>
                 <section class="code-block">
                     <div class="code-title">CSS</div>
-                <textarea id="code-css"><?= htmlspecialchars(file_get_contents('demo/style.css')) ?></textarea>
+                <textarea id="code-css"><?= htmlspecialchars(file_get_contents('snippets/1/1/style.css')) ?></textarea>
                 </section>
             </aside>
         </div>
