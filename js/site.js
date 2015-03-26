@@ -5,13 +5,15 @@ var editorHtml = CodeMirror.fromTextArea(document.getElementById('code-html'), {
     lineWrapping: true
 });
 
-var editorCss = CodeMirror.fromTextArea(document.getElementById('code-css'), {
-    lineNumbers: true,
-    mode:  "css",
-    scrollbarStyle: "simple",
-    lineWrapping: true
-});
 
+if($('#code-css').length > 0 ) {
+    var editorCss = CodeMirror.fromTextArea(document.getElementById('code-css'), {
+        lineNumbers: true,
+        mode: "css",
+        scrollbarStyle: "simple",
+        lineWrapping: true
+    });
+}
 
 $(function(){
     var iframeDoc = document.getElementById('code-iframe').contentWindow.document;

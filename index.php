@@ -1,3 +1,20 @@
+<?
+
+$htmlFile = 'snippets/1/1/index.html';
+$cssFile = 'snippets/1/1/style.css';
+$readmeFile = 'snippets/1/1/readme.md';
+
+$htmlData = false;
+if(file_exists($htmlFile)) {
+    $htmlData = htmlspecialchars(file_get_contents($htmlFile));
+}
+
+$cssData = false;
+if(file_exists($cssFile)) {
+    $cssData = htmlspecialchars(file_get_contents($cssFile));
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,14 +39,18 @@
             </main>
 
             <aside class="side">
-                <section class="code-block">
-                    <div class="code-title">HTML</div>
-                    <textarea id="code-html"><?= htmlspecialchars(file_get_contents('snippets/1/1/index.html')) ?></textarea>
-                </section>
-                <section class="code-block">
-                    <div class="code-title">CSS</div>
-                <textarea id="code-css"><?= htmlspecialchars(file_get_contents('snippets/1/1/style.css')) ?></textarea>
-                </section>
+                <? if(!empty($htmlData)): ?>
+                    <section class="code-block">
+                        <label class="code-title">HTML <em>index.html</em></label>
+                        <textarea id="code-html"><?= $htmlData ?></textarea>
+                    </section>
+                <? endif ?>
+                <? if(!empty($cssData)): ?>
+                    <section class="code-block">
+                        <label class="code-title">CSS <em>style.css</em></label>
+                        <textarea id="code-css"><?= $cssData ?></textarea>
+                    </section>
+                <? endif ?>
             </aside>
         </div>
     </div>

@@ -111,11 +111,19 @@ textarea {
 
 .code-title {
     border-bottom: 1px solid #f4f4f4;
-    padding: 19px;
     font-size: 16px;
-    line-height: 1;
+    line-height: 54px;
     font-weight: bold;
     letter-spacing: .5px;
+    padding: 0 19px;
+
+    em {
+        float: right;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        color: #999;
+    }
 }
 
 .code-preview {
