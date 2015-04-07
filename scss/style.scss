@@ -73,6 +73,19 @@ textarea {
 }
 
 .header {
+    line-height: 50px;
+}
+
+.snippet-select {
+    display: inline-block;
+    float: right;
+    background: #fff;
+    padding: 10px;
+    height: 24px;
+    border-radius: 3px;
+    border: 1px solid #e6e6e6;
+    min-width: 200px;
+    margin: 12px 0;
 }
 
 .app-title {
@@ -116,6 +129,8 @@ textarea {
     font-weight: bold;
     letter-spacing: .5px;
     padding: 0 19px;
+    display: block;
+
 
     em {
         float: right;

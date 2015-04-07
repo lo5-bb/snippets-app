@@ -1,19 +1,5 @@
 <?
-
-$htmlFile = 'snippets/1/1/index.html';
-$cssFile = 'snippets/1/1/style.css';
-$readmeFile = 'snippets/1/1/readme.md';
-
-$htmlData = false;
-if(file_exists($htmlFile)) {
-    $htmlData = htmlspecialchars(file_get_contents($htmlFile));
-}
-
-$cssData = false;
-if(file_exists($cssFile)) {
-    $cssData = htmlspecialchars(file_get_contents($cssFile));
-}
-
+include 'app.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +15,12 @@ if(file_exists($cssFile)) {
 <body>
     <div class="wrap">
         <header class="header">
+            <select class="snippet-select">
+                <? foreach(app::getSnippetsList() as $file=>$snippet): ?>
+                    <option value="<?= $file ?>"><?= $snippet ?></option>
+                <? endforeach; ?>
+            </select>
+
             <h1 class="app-title">V Liceum Ogólnokształcące</h1>
         </header>
 
@@ -39,16 +31,15 @@ if(file_exists($cssFile)) {
             </main>
 
             <aside class="side">
-                <? if(!empty($htmlData)): ?>
-                    <section class="code-block">
-                        <label class="code-title">HTML <em>index.html</em></label>
-                        <textarea id="code-html"><?= $htmlData ?></textarea>
-                    </section>
-                <? endif ?>
-                <? if(!empty($cssData)): ?>
+                <section class="code-block">
+                    <label class="code-title">HTML <em>index.html</em></label>
+                    <textarea id="code-html"><?= app::getSnippetHtml() ?></textarea>
+                </section>
+
+                <? if(app::hasSnippetCss()): ?>
                     <section class="code-block">
                         <label class="code-title">CSS <em>style.css</em></label>
-                        <textarea id="code-css"><?= $cssData ?></textarea>
+                        <textarea id="code-css"><?= app::getSnippetCss() ?></textarea>
                     </section>
                 <? endif ?>
             </aside>

@@ -41,6 +41,6 @@ $(function(){
     };
 
     setHtml();
-    setInterval(setHtml, 1000);
+    //setInterval(setHtml, 1000);
 });
 
