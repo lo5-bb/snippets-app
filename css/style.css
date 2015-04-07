@@ -507,6 +507,11 @@ span.CodeMirror-selectedtext {
   font-weight: 700;
   padding: 0 20px 14px 20px;
   letter-spacing: .3px; }
+  .app-title a {
+    color: inherit;
+    text-decoration: none; }
+    .app-title a:hover {
+      text-decoration: underline; }
 
 .main, .side {
   display: block;
@@ -547,3 +552,7 @@ span.CodeMirror-selectedtext {
   height: 100%;
   display: block;
   min-height: 500px; }
+
+.btn {
+  color: #fff;
+  backgrpound: red; }

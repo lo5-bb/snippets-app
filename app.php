@@ -35,9 +35,9 @@ class app {
 
 		if(self::$snippetsList === false) {
 			self::$snippetsList = [];
-			$files = self::rglob(self::$snippetsDir . '*/index.html');
+			$files = self::rglob(self::$snippetsDir . '*/body.html');
 			foreach ($files as $file) {
-				if (preg_match('#\/([0-9\/]+)\/index.html#', $file, $match)) {
+				if (preg_match('#\/([0-9\/]+)\/body.html#', $file, $match)) {
 					$snippetName = str_replace('/', '.', $match[1]);
 					self::$snippetsList[$snippetName] = $snippetName;
 				}
@@ -56,7 +56,7 @@ class app {
 	private static function getHtmlFile($snippet) {
 		$snippet = str_replace('.', '/', $snippet);
 
-		return self::$snippetsDir.$snippet.'/index.html';
+		return self::$snippetsDir.$snippet.'/body.html';
 	}
 
 	private static function getCssFile($snippet) {

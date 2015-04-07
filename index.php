@@ -21,12 +21,15 @@ include 'app.php';
                 <? endforeach; ?>
             </select>
 
-            <h1 class="app-title">V Liceum Ogólnokształcące</h1>
+            <h1 class="app-title"><a href="<?= app::urlBase() ?>">V Liceum Ogólnokształcące</a></h1>
         </header>
 
         <div class="app">
             <main class="main">
-                <div class="code-title">Podgląd kodu</div>
+                <div class="code-title">
+                    Podgląd kodu
+                    <a class="btn" href="#">Zapisz zmiany</a>
+                </div>
                 <iframe id="code-iframe" class="code-preview"></iframe>
             </main>
 
