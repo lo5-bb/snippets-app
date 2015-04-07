@@ -7,9 +7,25 @@ class app {
 	private static $snippetsList = false;
 	private static $currentSnippet = false;
 
+	public static function urlBase() {
+		$url = $_SERVER['REQUEST_SCHEME'];
+		$url .= '://';
+		$url .= $_SERVER['SERVER_NAME'];
+		if($_SERVER['SERVER_PORT'] != 80) {
+			$url .= ':'.$_SERVER['SERVER_PORT'];
+		}
+		$path = '';
+		if(!empty($_SERVER['SCRIPT_NAME'])) {
+			$path = preg_replace('#index\.php$#', '', $_SERVER['SCRIPT_NAME']);
+		}
+		$url .= $path;
+		$url = rtrim($url, '/').'/';
+		return $url;
+	}
+
 	private static function rglob($pattern, $flags = 0) {
 		$files = glob($pattern, $flags);
-		foreach (glob(dirname($pattern).'/*', GLOB_ONLYDIR|GLOB_NOSORT) as $dir) {
+		foreach (glob(dirname($pattern).'/*', GLOB_ONLYDIR) as $dir) {
 			$files = array_merge($files,  self::rglob($dir.'/'.basename($pattern), $flags));
 		}
 		return $files;
@@ -22,7 +38,8 @@ class app {
 			$files = self::rglob(self::$snippetsDir . '*/index.html');
 			foreach ($files as $file) {
 				if (preg_match('#\/([0-9\/]+)\/index.html#', $file, $match)) {
-					self::$snippetsList[$match[1]] = str_replace('/', '.', $match[1]);
+					$snippetName = str_replace('/', '.', $match[1]);
+					self::$snippetsList[$snippetName] = $snippetName;
 				}
 			}
 		}
@@ -36,20 +53,20 @@ class app {
 		}
 	}
 
-	private function getHtmlFile($snippet) {
+	private static function getHtmlFile($snippet) {
 		$snippet = str_replace('.', '/', $snippet);
 
 		return self::$snippetsDir.$snippet.'/index.html';
 	}
 
-	private function getCssFile($snippet) {
+	private static function getCssFile($snippet) {
 		$snippet = str_replace('.', '/', $snippet);
 
 		return self::$snippetsDir.$snippet.'/style.css';
 	}
 
 
-	private static function getCurrentSnippet() {
+	public static function getCurrentSnippet() {
 
 		if(self::$currentSnippet === false) {
 			if (isset($_GET['file']) && file_exists(self::getHtmlFile($_GET['file']))) {

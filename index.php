@@ -15,9 +15,9 @@ include 'app.php';
 <body>
     <div class="wrap">
         <header class="header">
-            <select class="snippet-select">
+            <select class="snippet-select" onchange="javascript:window.location.href = this.value;">
                 <? foreach(app::getSnippetsList() as $file=>$snippet): ?>
-                    <option value="<?= $file ?>"><?= $snippet ?></option>
+                    <option value="<?= app::urlBase().$snippet ?>" <?= (app::getCurrentSnippet() == $snippet) ? 'selected' : '' ?>><?= $snippet ?></option>
                 <? endforeach; ?>
             </select>
 
