@@ -28,7 +28,7 @@ include 'app.php';
             <main class="main">
                 <div class="code-title">
                     Podgląd kodu
-                    <a class="btn" href="#">Zapisz zmiany</a>
+                    <a class="btn show" href="#">Zapisz zmiany</a>
                 </div>
                 <iframe id="code-iframe" class="code-preview"></iframe>
             </main>

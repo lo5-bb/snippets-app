@@ -7,7 +7,7 @@
 *, *:before, *:after {
   box-sizing: border-box; }
 
-html {
+html, body {
   height: 100%; }
 
 body {
@@ -477,7 +477,7 @@ span.CodeMirror-selectedtext {
   clear: both; }
 
 .wrap {
-  margin: 16px auto;
+  margin: 0 auto;
   max-width: 1600px;
   padding: 0 12px; }
 
@@ -489,6 +489,8 @@ span.CodeMirror-selectedtext {
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.02); }
 
 .header {
+  margin: 20px 0;
+  padding: 0 10px;
   line-height: 50px; }
 
 .snippet-select {
@@ -505,7 +507,7 @@ span.CodeMirror-selectedtext {
 .app-title {
   font-size: 23px;
   font-weight: 700;
-  padding: 0 20px 14px 20px;
+  padding: 0 20px 0 0;
   letter-spacing: .3px; }
   .app-title a {
     color: inherit;
@@ -546,6 +548,12 @@ span.CodeMirror-selectedtext {
     font-weight: normal;
     font-size: 12px;
     color: #999; }
+  .code-title .btn {
+    float: right;
+    margin-top: 12px;
+    visibility: hidden; }
+    .code-title .btn.show {
+      visibility: visible; }
 
 .code-preview {
   width: 100%;
@@ -555,4 +563,22 @@ span.CodeMirror-selectedtext {
 
 .btn {
   color: #fff;
-  backgrpound: red; }
+  display: inline-block;
+  vertical-align: middle;
+  font: inherit;
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
+  overflow: visible;
+  background-color: #3e84da;
+  -webkit-transition: background-color .3s, color .3s;
+          transition: background-color .3s, color .3s;
+  padding: 8px 10px;
+  border-radius: 3px;
+  border: none;
+  line-height: 1;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 14px; }
+  .btn:hover, .btn:focus {
+    background-color: #699fe2; }
