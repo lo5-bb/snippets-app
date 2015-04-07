@@ -85,7 +85,13 @@ class app {
 
 		$snippetData = preg_replace("#\n#s", "\n\t\t", $snippetData);
 
-		$snippet = "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<meta charset=\"utf-8\" />\n\t\t<title>Przykład ".$snippetName."</title>\n\n\t\t<link rel=\"stylesheet\" href=\"style.css\" />\n\t</head>\n\t<body>\n\t\t".$snippetData."\n\t</body>\n</html>";
+		$snippet = "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<meta charset=\"utf-8\" />\n\t\t<title>Przykład ".$snippetName."</title>";
+
+		if(self::hasSnippetCss()) {
+			$snippet .= "\n\n\t\t<link rel=\"stylesheet\" href=\"style.css\" />";
+		}
+
+		$snippet .= "\n\t</head>\n\t<body>\n\t\t".$snippetData."\n\t</body>\n</html>";
 
 		return htmlspecialchars($snippet);
 	}

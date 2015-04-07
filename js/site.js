@@ -24,17 +24,14 @@ $(function(){
     if($style.length == 0) {
         $style = $('<style>');
         $head.append($style);
+        $head.append('<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">');
+
     }
 
-    $head.append('<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">');
-
-    console.info($body.length);
-    console.info($head.length);
-    console.info($style.length);
 
     var setHtml = function() {
         var html = editorHtml.getValue();
-        var css = editorCss.getValue();
+        var css = editorCss ? editorCss.getValue() : '';
 
         $style.html('*,*:before,*:after{box-sizing:border-box}body{margin:20px;font-family:"Open Sans", sans-serif}'+css);
         $body.html(html);
