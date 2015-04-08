@@ -29,7 +29,7 @@ include 'app.php';
             <main class="main">
                 <div class="code-title">
                     Podgląd kodu
-                    <a class="btn jQ_changedBtn" href="#">Zapisz zmiany</a>
+                    <button class="btn jQ_changedBtn" disabled>Wykonaj kod</button>
                 </div>
                 <iframe id="code-iframe" class="code-preview"></iframe>
             </main>

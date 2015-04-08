@@ -212,16 +212,6 @@ textarea {
     .btn {
         float: right;
         margin-top: 12px;
-        visibility: hidden;
-        opacity: 0;
-        transition: .5s opacity, 0s visibility .5s;
-
-        &.changed {
-            visibility: visible;
-            opacity: 1;
-
-            transition-delay: 0s;
-        }
     }
 }
 
@@ -254,5 +244,11 @@ textarea {
 
     &:hover {
         background-color: lighten($base-color, 10%);
+    }
+
+    &.disabled,
+    &[disabled] {
+        background-color: #ccc;
+        cursor: default;
     }
 }

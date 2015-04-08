@@ -595,16 +595,7 @@ span.CodeMirror-selectedtext {
     color: #999; }
   .code-title .btn {
     float: right;
-    margin-top: 12px;
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: .5s opacity, 0s visibility .5s;
-            transition: .5s opacity, 0s visibility .5s; }
-    .code-title .btn.changed {
-      visibility: visible;
-      opacity: 1;
-      -webkit-transition-delay: 0s;
-              transition-delay: 0s; }
+    margin-top: 12px; }
 
 .code-preview {
   width: 100%;
@@ -633,3 +624,6 @@ span.CodeMirror-selectedtext {
   font-size: 14px; }
   .btn:hover {
     background-color: #699fe2; }
+  .btn.disabled, .btn[disabled] {
+    background-color: #ccc;
+    cursor: default; }
