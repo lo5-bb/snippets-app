@@ -105,6 +105,12 @@ textarea {
     margin-right: 20px;
     font-size: 20px;
     vertical-align: baseline;
+    transition: background-color .3s, color .3s;
+
+    &:hover,
+    &:focus {
+        background-color: lighten($base-color, 10%);
+    }
 }
 
 .app-title {

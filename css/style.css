@@ -516,7 +516,11 @@ span.CodeMirror-selectedtext {
   text-decoration: none;
   margin-right: 20px;
   font-size: 20px;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  -webkit-transition: background-color .3s, color .3s;
+          transition: background-color .3s, color .3s; }
+  .app-logo:hover, .app-logo:focus {
+    background-color: #699fe2; }
 
 .app-title {
   font-size: 23px;
