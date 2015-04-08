@@ -1,21 +1,6 @@
-var editorHtml = CodeMirror.fromTextArea(document.getElementById('code-html'), {
-    lineNumbers: true,
-    mode:  "htmlmixed",
-    scrollbarStyle: "simple",
-    lineWrapping: true
-});
-
-
-if($('#code-css').length > 0 ) {
-    var editorCss = CodeMirror.fromTextArea(document.getElementById('code-css'), {
-        lineNumbers: true,
-        mode: "css",
-        scrollbarStyle: "simple",
-        lineWrapping: true
-    });
-}
-
 $(function(){
+
+
     var iframeDoc = document.getElementById('code-iframe').contentWindow.document;
     var $body = $('body', iframeDoc);
     var $head = $('head', iframeDoc);
@@ -30,6 +15,10 @@ $(function(){
 
 
     var setHtml = function() {
+        $('.jQ_changedHtml').removeClass('changed');
+        $('.jQ_changedCss').removeClass('changed');
+
+
         var html = editorHtml.getValue();
         var css = editorCss ? editorCss.getValue() : '';
 
@@ -37,7 +26,45 @@ $(function(){
         $body.html(html);
     };
 
-    setHtml();
-    //setInterval(setHtml, 1000);
+    //-----
+
+    var editorHtml = CodeMirror.fromTextArea(document.getElementById('code-html'), {
+        lineNumbers: true,
+        mode:  "htmlmixed",
+        scrollbarStyle: "simple",
+        lineWrapping: true
+    });
+
+    editorHtml.on('change', function(e){
+        $('.jQ_changedHtml').addClass('changed');
+        $('.jQ_changedBtn').addClass('changed');
+    });
+
+
+    var editorCss = CodeMirror.fromTextArea(document.getElementById('code-css'), {
+        lineNumbers: true,
+        mode: "css",
+        scrollbarStyle: "simple",
+        lineWrapping: true
+    });
+
+    editorCss.on('change', function(e){
+        $('.jQ_changedCss').addClass('changed');
+        $('.jQ_changedBtn').addClass('changed');
+    });
+
+
+    //-----
+
+    $('.jQ_changedBtn').on('click', function(e){
+        setHtml();
+
+        e.preventDefault();
+        return false;
+    });
+
+    //-----
+
+
 });
 

@@ -29,23 +29,21 @@ include 'app.php';
             <main class="main">
                 <div class="code-title">
                     Podgląd kodu
-                    <a class="btn show" href="#">Zapisz zmiany</a>
+                    <a class="btn jQ_changedBtn" href="#">Zapisz zmiany</a>
                 </div>
                 <iframe id="code-iframe" class="code-preview"></iframe>
             </main>
 
             <aside class="side">
                 <section class="code-block">
-                    <label class="code-title">HTML <em>index.html</em></label>
+                    <label class="code-title">HTML <span class="edit-info jQ_changedHtml"></span> <em>index.html</em></label>
                     <textarea id="code-html"><?= app::getSnippetHtml() ?></textarea>
                 </section>
 
-                <? if(app::hasSnippetCss()): ?>
-                    <section class="code-block">
-                        <label class="code-title">CSS <em>style.css</em></label>
-                        <textarea id="code-css"><?= app::getSnippetCss() ?></textarea>
-                    </section>
-                <? endif ?>
+                <section class="code-block">
+                    <label class="code-title">CSS <span class="edit-info jQ_changedCss"></span> <em>style.css</em></label>
+                    <textarea id="code-css"><?= app::getSnippetCss() ?></textarea>
+                </section>
             </aside>
         </div>
     </div>

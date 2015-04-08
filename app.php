@@ -87,7 +87,7 @@ class app {
 
 		$snippet = "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<meta charset=\"utf-8\" />\n\t\t<title>Przykład ".$snippetName."</title>";
 
-		if(self::hasSnippetCss()) {
+		if(self::hasSnippetCss($snippetName)) {
 			$snippet .= "\n\n\t\t<link rel=\"stylesheet\" href=\"style.css\" />";
 		}
 
@@ -96,12 +96,17 @@ class app {
 		return htmlspecialchars($snippet);
 	}
 
-	public static function hasSnippetCss() {
-		return htmlspecialchars(trim(file_exists(self::getCssFile(self::getCurrentSnippet()))));
+	public static function hasSnippetCss($snippet) {
+		return file_exists(self::getCssFile($snippet));
 	}
 
 	public static function getSnippetCss() {
 		$snippet = self::getCurrentSnippet();
+
+		if(!self::hasSnippetCss($snippet)) {
+			return '';
+		}
+
 		return htmlspecialchars(file_get_contents(self::getCssFile($snippet)));
 	}
 }

@@ -16,6 +16,12 @@ body {
   color: #555e65;
   background: #f6f6f7; }
 
+::-webkit-scrollbar {
+  width: 8px; }
+
+::-webkit-scrollbar-thumb {
+  background: #ccc; }
+
 textarea {
   font-family: Consolas, "Courier New", monospace;
   font-size: 10px;
@@ -428,7 +434,7 @@ span.CodeMirror-selectedtext {
 .CodeMirror-simplescroll-horizontal {
   bottom: 0;
   left: 0;
-  height: 7px; }
+  height: 8px; }
 
 .CodeMirror-simplescroll-horizontal div {
   bottom: 0;
@@ -437,7 +443,7 @@ span.CodeMirror-selectedtext {
 .CodeMirror-simplescroll-vertical {
   right: 0;
   top: 0;
-  width: 7px; }
+  width: 8px; }
 
 .CodeMirror-simplescroll-vertical div {
   right: 0;
@@ -565,6 +571,22 @@ span.CodeMirror-selectedtext {
   letter-spacing: .5px;
   padding: 0 19px;
   display: block; }
+  .code-title .edit-info {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #3e84da;
+    margin: 0 0 3px 3px;
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: .5s opacity, 0s visibility .5s;
+            transition: .5s opacity, 0s visibility .5s; }
+    .code-title .edit-info.changed {
+      visibility: visible;
+      opacity: 1;
+      -webkit-transition-delay: 0s;
+              transition-delay: 0s; }
   .code-title em {
     float: right;
     font-style: normal;
@@ -574,9 +596,15 @@ span.CodeMirror-selectedtext {
   .code-title .btn {
     float: right;
     margin-top: 12px;
-    visibility: hidden; }
-    .code-title .btn.show {
-      visibility: visible; }
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: .5s opacity, 0s visibility .5s;
+            transition: .5s opacity, 0s visibility .5s; }
+    .code-title .btn.changed {
+      visibility: visible;
+      opacity: 1;
+      -webkit-transition-delay: 0s;
+              transition-delay: 0s; }
 
 .code-preview {
   width: 100%;
@@ -603,5 +631,5 @@ span.CodeMirror-selectedtext {
   font-weight: normal;
   text-decoration: none;
   font-size: 14px; }
-  .btn:hover, .btn:focus {
+  .btn:hover {
     background-color: #699fe2; }
