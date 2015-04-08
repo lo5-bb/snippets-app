@@ -87,9 +87,7 @@ class app {
 
 		$snippet = "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<meta charset=\"utf-8\" />\n\t\t<title>Przykład ".$snippetName."</title>";
 
-		if(self::hasSnippetCss($snippetName)) {
-			$snippet .= "\n\n\t\t<link rel=\"stylesheet\" href=\"style.css\" />";
-		}
+		$snippet .= "\n\n\t\t<link rel=\"stylesheet\" href=\"style.css\" />";
 
 		$snippet .= "\n\t</head>\n\t<body>\n\t\t".$snippetData."\n\t</body>\n</html>";
 
