@@ -2,7 +2,7 @@
 include 'app.php';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <title>
@@ -21,7 +21,8 @@ include 'app.php';
                 <? endforeach; ?>
             </select>
 
-            <h1 class="app-title"><a href="<?= app::urlBase() ?>">V Liceum Ogólnokształcące</a></h1>
+            <a class="app-logo" href="<?= app::urlBase() ?>">V</a>
+            <h1 class="app-title"><a href="<?= app::urlBase() ?>">V Liceum Ogólnokształcące <em>- Przykład <?= app::getCurrentSnippet() ?></em></a></h1>
         </header>
 
         <div class="app">

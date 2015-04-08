@@ -504,16 +504,35 @@ span.CodeMirror-selectedtext {
   min-width: 200px;
   margin: 12px 0; }
 
+.app-logo {
+  background: #3e84da;
+  color: #fff;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 20px;
+  vertical-align: baseline; }
+
 .app-title {
   font-size: 23px;
   font-weight: 700;
   padding: 0 20px 0 0;
-  letter-spacing: .3px; }
+  letter-spacing: .3px;
+  display: inline-block; }
   .app-title a {
     color: inherit;
     text-decoration: none; }
     .app-title a:hover {
       text-decoration: underline; }
+  .app-title em {
+    font-style: normal;
+    color: #999;
+    font-weight: normal; }
 
 .main, .side {
   display: block;
