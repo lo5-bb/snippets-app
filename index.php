@@ -10,12 +10,12 @@ include 'app.php';
     </title>
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
     <div class="wrap">
         <header class="header">
-            <select class="snippet-select" onchange="javascript:window.location.href = this.value;">
+            <select class="snippet-select" onchange="window.location.href = this.value;">
                 <? foreach(app::getSnippetsList() as $file=>$snippet): ?>
                     <option value="<?= app::urlBase().$snippet ?>" <?= (app::getCurrentSnippet() == $snippet) ? 'selected' : '' ?>><?= $snippet ?></option>
                 <? endforeach; ?>
@@ -47,12 +47,12 @@ include 'app.php';
             </aside>
         </div>
     </div>
-    <script type="text/javascript" src="js/codemirror/codemirror.js"></script>
-    <script type="text/javascript" src="js/codemirror/mode/xml/xml.js"></script>
-    <script type="text/javascript" src="js/codemirror/mode/css/css.js"></script>
-    <script type="text/javascript" src="js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
-    <script type="text/javascript" src="js/codemirror/addon/scroll/simplescrollbars.js"></script>
-    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
-    <script type="text/javascript" src="js/site.js"></script>
+    <script type="text/javascript" src="assets/js/codemirror/codemirror.js"></script>
+    <script type="text/javascript" src="assets/js/codemirror/mode/xml/xml.js"></script>
+    <script type="text/javascript" src="assets/js/codemirror/mode/css/css.js"></script>
+    <script type="text/javascript" src="assets/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script type="text/javascript" src="assets/js/codemirror/addon/scroll/simplescrollbars.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="assets/js/site.js"></script>
 </body>
 </html>
