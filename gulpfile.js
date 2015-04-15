@@ -8,13 +8,13 @@ var gulp            = require('gulp'),
 	sass         	= require('gulp-sass');
 
 gulp.task('watch', function () {
-	gulp.watch([ 'scss/**/*.scss'], ['sass']);
+	gulp.watch([ './assets/scss/**/*.scss'], ['sass']);
 });
 
 
 // sass
 gulp.task('sass', function () {
-	return gulp.src('scss/**/*.scss')
+	return gulp.src('./assets/scss/**/*.scss')
 		.pipe(sass({
 			onError: function (error) {
 				gutil.log(gutil.colors.red(error));
@@ -25,7 +25,7 @@ gulp.task('sass', function () {
 			}
 		}))
 		.pipe(autoprefixer())
-		.pipe(gulp.dest('./css'));
+		.pipe(gulp.dest('./assets/css'));
 });
 
 gulp.task('serve', ['sass', 'watch']);

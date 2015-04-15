@@ -4,12 +4,12 @@ include 'app.php';
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>
         Snippets
     </title>
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -21,7 +21,7 @@ include 'app.php';
                 <? endforeach; ?>
             </select>
 
-            <a class="app-logo" href="<?= app::urlBase() ?>">V</a>
+            <a class="app-logo" href="<?= app::urlBase() ?>"><i class="fa fa-send"></i></a>
             <h1 class="app-title"><a href="<?= app::urlBase() ?>">V Liceum Ogólnokształcące <em>- Przykład <?= app::getCurrentSnippet() ?></em></a></h1>
         </header>
 
@@ -29,7 +29,10 @@ include 'app.php';
             <main class="main">
                 <div class="code-title">
                     Podgląd kodu
-                    <button class="btn jQ_changedBtn" disabled>Wykonaj kod</button>
+                    <div class="btn-group">
+                        <button class="btn jQ_saveBtn hidden"><i class="fa fa-save"></i></button>
+                        <button class="btn jQ_changedBtn" disabled>Wykonaj kod</button>
+                    </div>
                 </div>
                 <iframe id="code-iframe" class="code-preview"></iframe>
             </main>

@@ -8,7 +8,7 @@ $(function(){
     if($style.length == 0) {
         $style = $('<style>');
         $head.append($style);
-        $head.append('<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">');
+        $head.append('<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,latin-ext" rel="stylesheet" type="text/css">');
 
     }
 
@@ -19,10 +19,16 @@ $(function(){
         };
     };
 
-    var setHtml = function() {
+    var setHtml = function(allowSave) {
+        allowSave = allowSave || false;
+
         $('.jQ_changedHtml').removeClass('changed');
         $('.jQ_changedCss').removeClass('changed');
         $('.jQ_changedBtn').prop('disabled', true);
+
+        if(allowSave) {
+            $('.jQ_saveBtn').removeClass('hidden');
+        }
 
 
         var html = editorHtml.getValue();
@@ -35,7 +41,7 @@ $(function(){
     //-----
 
     var onSaveClick = function() {
-        setHtml();
+        setHtml(true);
         return false;
     };
 
@@ -79,7 +85,7 @@ $(function(){
     //-----
 
     $('.jQ_changedBtn').on('click', function(e){
-        setHtml();
+        setHtml(true);
 
         e.preventDefault();
         return false;
@@ -87,6 +93,6 @@ $(function(){
 
     //-----
 
-    setHtml();
+    setHtml(false);
 });
 
