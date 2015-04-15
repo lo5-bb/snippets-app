@@ -49,7 +49,18 @@ include 'app.php';
                 <iframe id="code-iframe" class="code-preview"></iframe>
             </main>
         </div>
+        <footer class="footer">
+            <div class="footer-copyright">
+                Copyright <?= date('Y') ?> V Liceum Ogólnokształcące.
+            </div>
+
+            <div class="footer-right">
+                sdf
+            </div>
+        </footer>
     </div>
+
+
     <script type="text/javascript" src="assets/js/codemirror/codemirror.js"></script>
     <script type="text/javascript" src="assets/js/codemirror/mode/xml/xml.js"></script>
     <script type="text/javascript" src="assets/js/codemirror/mode/css/css.js"></script>

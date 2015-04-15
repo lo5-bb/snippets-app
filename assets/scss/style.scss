@@ -30,7 +30,7 @@ body {
     background: #f6f6f7;
 
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
@@ -42,7 +42,6 @@ body {
 ::-webkit-scrollbar-thumb {
     background: #ccc;
 }
-
 
 
 textarea {
@@ -74,6 +73,7 @@ textarea {
     &:after {
         content: '';
         clear: both;
+        display: table;
     }
 }
 
@@ -94,7 +94,7 @@ textarea {
 
     @media (min-width: 960px) {
         height: 88%;
-        height: calc(100% - 110px);
+        height: calc(100% - 140px);
     }
 
 }
@@ -103,6 +103,28 @@ textarea {
     padding: 24px 10px;
     line-height: 40px;
     height: 88px;
+}
+
+.footer {
+    @extend .clearfix;
+    color: #aaa;
+}
+
+.footer-copyright,
+.footer-right {
+    margin-bottom: 10px;
+
+    @media (min-width: 960px) {
+        float: left;
+        width: 50%;
+        margin-bottom: 0;
+    }
+}
+
+.footer-right {
+    @media (min-width: 960px) {
+        text-align: right;
+    }
 }
 
 .snippet-select {

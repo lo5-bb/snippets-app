@@ -34,7 +34,7 @@ $(function(){
         var html = editorHtml.getValue();
         var css = editorCss ? editorCss.getValue() : '';
 
-        $style.html('*,*:before,*:after{box-sizing:border-box}body{margin:20px;font-family:"Open Sans", sans-serif}'+css);
+        $style.html('*,*:before,*:after{box-sizing:border-box}body{margin:20px;font-family:"Open Sans", sans-serif;-webkit-font-smoothing: antialiased;}'+css);
         $body.html(html);
     };
 
