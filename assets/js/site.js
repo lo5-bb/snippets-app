@@ -55,7 +55,8 @@ $(function(){
             "Cmd-S": onSaveClick
         },
         tabMode: 'shift',
-        minHeight: 100
+        autoCloseTags: true,
+        styleActiveLine: true
     });
 
     editorHtml.on('change', function(e){
@@ -74,7 +75,8 @@ $(function(){
             "Ctrl-S": onSaveClick,
             "Cmd-S": onSaveClick
         },
-        minHeight: 100
+        autoCloseBrackets: true,
+        styleActiveLine: true
     });
 
     editorCss.on('change', function(e){

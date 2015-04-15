@@ -132,10 +132,14 @@ div.CodeMirror-overwrite div.CodeMirror-cursor {}
 
 /* Default styles for common addons */
 
-div.CodeMirror span.CodeMirror-matchingbracket {color: #0f0;}
+
+div.CodeMirror span.CodeMirror-matchingtag,
+div.CodeMirror span.CodeMirror-matchingbracket {
+  background: #CFEAD6;
+}
 div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
 .CodeMirror-matchingtag { background: rgba(255, 150, 0, .3); }
-.CodeMirror-activeline-background {background: #e8f2ff;}
+.CodeMirror-activeline .CodeMirror-linenumber {background: #f0f0f0; color: #666}
 
 /* STOP */
 

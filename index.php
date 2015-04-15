@@ -66,6 +66,10 @@ include 'app.php';
     <script type="text/javascript" src="assets/js/codemirror/mode/css/css.js"></script>
     <script type="text/javascript" src="assets/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
     <script type="text/javascript" src="assets/js/codemirror/addon/scroll/simplescrollbars.js"></script>
+    <script type="text/javascript" src="assets/js/codemirror/addon/edit/closetag.js"></script>
+    <script type="text/javascript" src="assets/js/codemirror/addon/edit/closebrackets.js"></script>
+    <script type="text/javascript" src="assets/js/codemirror/addon/selection/active-line.js"></script>
+
     <script type="text/javascript" src="assets/js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="assets/js/screenfull.js"></script>
     <script type="text/javascript" src="assets/js/site.js"></script>
