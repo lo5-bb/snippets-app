@@ -96,5 +96,9 @@ $(function(){
     //-----
 
     setHtml(false);
+
+    if (screenfull.enabled) {
+        screenfull.request();
+    }
 });
 
