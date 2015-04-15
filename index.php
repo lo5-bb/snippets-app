@@ -51,11 +51,11 @@ include 'app.php';
         </div>
         <footer class="footer">
             <div class="footer-copyright">
-                Copyright <?= date('Y') ?> V Liceum Ogólnokształcące.
+                &copy; Copyright <?= date('Y') ?> V Liceum Ogólnokształcące.
             </div>
 
             <div class="footer-right">
-                sdf
+                <a href="<?= app::getCurrentSnippetSourceUrl() ?>" target="_blank">Zobacz źródło przykładu w serwisie <i class="fa fa-github"></i> GitHub</a>
             </div>
         </footer>
     </div>

@@ -79,6 +79,14 @@ class app {
 		return self::$currentSnippet;
 	}
 
+	public static function getCurrentSnippetSourceUrl() {
+		$snippet = self::getCurrentSnippet();
+
+		$snippet = str_replace('.', '/', $snippet);
+
+		return 'https://github.com/lo5-bb/snippets/tree/master/'.$snippet;
+	}
+
 	public static function getSnippetHtml() {
 		$snippetName = self::getCurrentSnippet();
 		$snippetData = trim(file_get_contents(self::getHtmlFile($snippetName)));

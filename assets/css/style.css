@@ -26,6 +26,12 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #ccc; }
 
+a {
+  color: #3e84da;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
 textarea {
   font-family: 'Source Code Pro', Consolas, Monaco, 'Andale Mono', 'Lucida Console', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
   line-height: 1.25;
@@ -2237,6 +2243,8 @@ span.CodeMirror-selectedtext {
 
 .footer {
   color: #aaa; }
+  .footer a {
+    color: inherit; }
 
 .footer-copyright, .footer-right {
   margin-bottom: 10px; }
