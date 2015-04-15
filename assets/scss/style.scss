@@ -90,15 +90,19 @@ textarea {
     border: 1px solid #e6e6e6;
     overflow: hidden;
     box-shadow: 0 0 0 2px rgba(0, 0, 0, .02);
+    margin-bottom: 16px;
 
-    height: 88%;
-    height: calc(100% - 114px);
+    @media (min-width: 960px) {
+        height: 88%;
+        height: calc(100% - 110px);
+    }
+
 }
 
 .header {
-    padding: 20px 10px;
-    line-height: 54px;
-    height: 94px;
+    padding: 24px 10px;
+    line-height: 40px;
+    height: 88px;
 }
 
 .snippet-select {
@@ -110,7 +114,7 @@ textarea {
     border-radius: 3px;
     border: 1px solid #e6e6e6;
     min-width: 200px;
-    margin: 12px 0;
+    margin: 7px 0;
 }
 
 .app-logo {
@@ -139,7 +143,12 @@ textarea {
     font-weight: 700;
     padding: 0 20px 0 0;
     letter-spacing: .3px;
-    display: inline-block;
+    display: none;
+    line-height: 40px;
+
+    @media (min-width: 960px) {
+        display: inline-block;
+    }
 
     a {
         color: inherit;
@@ -160,21 +169,28 @@ textarea {
 .main,
 .side {
     display: block;
-    width: 50%;
-    float: right;
-    height: 100%;
+
+    @media (min-width: 960px) {
+        width: 50%;
+        float: left;
+        height: 100%;
+    }
 }
 
 .side {
-    border-right: 1px solid $border-color;
+    @media (min-width: 960px) {
+        border-right: 1px solid $border-color;
+    }
 }
 
 .code-block {
     height: 50%;
     border-bottom: 1px solid $border-color;
 
-    &:last-child {
-        border: 0;
+    @media (min-width: 960px) {
+        &:last-child {
+            border: 0;
+        }
     }
 
     textarea,

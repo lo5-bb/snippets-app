@@ -26,17 +26,6 @@ include 'app.php';
         </header>
 
         <div class="app">
-            <main class="main">
-                <div class="code-title">
-                    Podgląd kodu
-                    <div class="btn-group">
-                        <button class="btn jQ_saveBtn hidden"><i class="fa fa-save"></i></button>
-                        <button class="btn jQ_changedBtn" disabled>Wykonaj kod</button>
-                    </div>
-                </div>
-                <iframe id="code-iframe" class="code-preview"></iframe>
-            </main>
-
             <aside class="side">
                 <section class="code-block">
                     <label class="code-title">HTML <span class="edit-info jQ_changedHtml"></span> <em>index.html</em></label>
@@ -48,6 +37,17 @@ include 'app.php';
                     <textarea id="code-css"><?= app::getSnippetCss() ?></textarea>
                 </section>
             </aside>
+
+            <main class="main">
+                <div class="code-title">
+                    Podgląd kodu
+                    <div class="btn-group">
+                        <button class="btn jQ_saveBtn hidden"><i class="fa fa-save"></i></button>
+                        <button class="btn jQ_changedBtn" disabled>Wykonaj kod</button>
+                    </div>
+                </div>
+                <iframe id="code-iframe" class="code-preview"></iframe>
+            </main>
         </div>
     </div>
     <script type="text/javascript" src="assets/js/codemirror/codemirror.js"></script>

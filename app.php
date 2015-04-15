@@ -84,6 +84,9 @@ class app {
 		$snippetData = trim(file_get_contents(self::getHtmlFile($snippetName)));
 
 		$snippetData = preg_replace("#\n#s", "\n\t\t", $snippetData);
+		$snippetData = preg_replace_callback("#(<pre.*>)(.*?)(<\/pre>)#si", function($m){
+			return $m[1].preg_replace("#\n\t\t#s", "\n", $m[2]).$m[3];
+		}, $snippetData);
 
 		$snippet = "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<meta charset=\"utf-8\" />\n\t\t<title>Przykład ".$snippetName."</title>";
 
