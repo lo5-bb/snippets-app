@@ -2301,6 +2301,7 @@ span.CodeMirror-selectedtext {
     .code-block:last-child {
       border: 0; } }
   .code-block textarea, .code-block .CodeMirror {
+    min-height: 100px;
     height: 100%;
     height: calc(100% - 54px); }
 

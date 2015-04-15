@@ -54,7 +54,8 @@ $(function(){
             "Ctrl-S": onSaveClick,
             "Cmd-S": onSaveClick
         },
-        tabMode: 'shift'
+        tabMode: 'shift',
+        minHeight: 100
     });
 
     editorHtml.on('change', function(e){
@@ -72,7 +73,8 @@ $(function(){
         extraKeys: {
             "Ctrl-S": onSaveClick,
             "Cmd-S": onSaveClick
-        }
+        },
+        minHeight: 100
     });
 
     editorCss.on('change', function(e){

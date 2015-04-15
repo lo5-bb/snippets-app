@@ -195,6 +195,7 @@ textarea {
 
     textarea,
     .CodeMirror {
+        min-height: 100px;
         height: 100%;
         height: calc(100% - 54px);
     }
