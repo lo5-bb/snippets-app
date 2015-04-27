@@ -72,6 +72,9 @@ include 'app.php';
 
     <script type="text/javascript" src="assets/js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="assets/js/screenfull.js"></script>
+    <script type="text/javascript" src="assets/js/jszip.min.js"></script>
+    <script type="text/javascript" src="assets/js/fileSaver.min.js"></script>
+    <script type="text/javascript" src="assets/js/date.js"></script>
     <script type="text/javascript" src="assets/js/site.js"></script>
 </body>
 </html>

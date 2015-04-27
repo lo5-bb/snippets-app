@@ -1,6 +1,5 @@
 <?php
 
-
 class app {
 
 	private static $snippetsDir = './snippets/';
@@ -32,9 +31,8 @@ class app {
 	}
 
 	public static function getSnippetsList() {
-
 		if(self::$snippetsList === false) {
-			self::$snippetsList = [];
+			self::$snippetsList = array();
 			$files = self::rglob(self::$snippetsDir . '*/body.html');
 			foreach ($files as $file) {
 				if (preg_match('#\/([0-9\/]+)\/body.html#', $file, $match)) {

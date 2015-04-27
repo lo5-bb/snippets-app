@@ -32,7 +32,7 @@ $(function(){
 
 
         var html = editorHtml.getValue();
-        var css = editorCss ? editorCss.getValue() : '';
+        var css = editorCss.getValue();
 
         $style.html('*,*:before,*:after{box-sizing:border-box}body{margin:20px;font-family:"Open Sans", sans-serif;-webkit-font-smoothing: antialiased;}'+css);
         $body.html(html);
@@ -93,6 +93,24 @@ $(function(){
 
         e.preventDefault();
         return false;
+    });
+
+
+    $('.jQ_saveBtn').on('click', function(){
+        var html = editorHtml.getValue(),
+            css = editorCss.getValue(),
+            zip = new JSZip();
+
+        zip.file('style.css', css);
+        zip.file('index.html', html);
+
+        var content = zip.generate({
+            type: 'blob'
+        });
+
+        today = new Date();
+        var filename = 'lo5-snippet-' + today.format("yyyy-mm-dd-HH-MM");
+        saveAs(content, filename + '.zip');
     });
 
     //-----
