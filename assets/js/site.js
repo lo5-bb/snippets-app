@@ -27,7 +27,7 @@ $(function(){
         $('.jQ_changedBtn').prop('disabled', true);
 
         if(allowSave) {
-            $('.jQ_saveBtn').removeClass('hidden');
+            $('.jQ_saveBtn').prop('disabled', false);
         }
 
 
@@ -50,10 +50,6 @@ $(function(){
         mode:  "htmlmixed",
         scrollbarStyle: "simple",
         lineWrapping: true,
-        extraKeys: {
-            "Ctrl-S": onSaveClick,
-            "Cmd-S": onSaveClick
-        },
         tabMode: 'shift',
         autoCloseTags: true,
         styleActiveLine: true
@@ -62,6 +58,7 @@ $(function(){
     editorHtml.on('change', function(e){
         $('.jQ_changedHtml').addClass('changed');
         $('.jQ_changedBtn').prop('disabled', false);
+        $('.jQ_saveBtn').prop('disabled', true);
         setExitMessage();
     });
 
@@ -71,10 +68,6 @@ $(function(){
         mode: "css",
         scrollbarStyle: "simple",
         lineWrapping: true,
-        extraKeys: {
-            "Ctrl-S": onSaveClick,
-            "Cmd-S": onSaveClick
-        },
         autoCloseBrackets: true,
         styleActiveLine: true
     });
@@ -87,6 +80,18 @@ $(function(){
 
 
     //-----
+    var onKeyDown = function(e) {
+        if ((e.which == '115' || e.which == '83' ) && (e.ctrlKey || e.metaKey)) {
+            onSaveClick();
+
+            e.preventDefault();
+            return false;
+        }
+        return true;
+    };
+
+    $(document).keydown(onKeyDown);
+    $(iframeDoc).keydown(onKeyDown);
 
     $('.jQ_changedBtn').on('click', function(e){
         setHtml(true);

@@ -282,7 +282,7 @@ textarea {
 			&.hidden {
 				opacity: 0;
 				visibility: hidden;
-				transition-delay: .5s;
+				transition-delay: 0s, .5s;
 			}
 		}
 	}

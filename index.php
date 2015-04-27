@@ -22,7 +22,7 @@ include 'app.php';
             </select>
 
             <a class="app-logo" href="<?= app::urlBase() ?>"><i class="fa fa-send"></i></a>
-            <h1 class="app-title"><a href="<?= app::urlBase() ?>">V Liceum Ogólnokształcące <em>- Przykład <?= app::getCurrentSnippet() ?></em></a></h1>
+            <h1 class="app-title"><a href="<?= app::urlBase() ?>">LOVe Code <em>- Przykład <?= app::getCurrentSnippet() ?></em></a></h1>
         </header>
 
         <div class="app">
@@ -42,7 +42,7 @@ include 'app.php';
                 <div class="code-title">
                     Podgląd kodu
                     <div class="btn-group">
-                        <button class="btn jQ_saveBtn hidden"><i class="fa fa-save"></i></button>
+                        <button class="btn jQ_saveBtn" disabled><i class="fa fa-save"></i></button>
                         <button class="btn jQ_changedBtn" disabled>Wykonaj kod</button>
                     </div>
                 </div>
