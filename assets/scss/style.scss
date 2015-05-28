@@ -278,12 +278,6 @@ textarea {
 			vertical-align: baseline;
 			margin-left: 5px;
 			transition: .5s opacity, 0s visibility .0s;
-
-			&.hidden {
-				opacity: 0;
-				visibility: hidden;
-				transition-delay: 0s, .5s;
-			}
 		}
 	}
 }

@@ -2368,11 +2368,6 @@ span.CodeMirror-selectedtext {
       margin-left: 5px;
       -webkit-transition: .5s opacity, 0s visibility 0s;
               transition: .5s opacity, 0s visibility 0s; }
-      .code-title .btn-group .btn.hidden {
-        opacity: 0;
-        visibility: hidden;
-        -webkit-transition-delay: 0s, .5s;
-                transition-delay: 0s, .5s; }
 
 .code-preview {
   width: 100%;
