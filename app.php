@@ -2,7 +2,7 @@
 
 class app {
 
-	private static $snippetsDir = './snippets/';
+	private static $snippetsDir = './snippets/html/';
 	private static $snippetsList = false;
 	private static $currentSnippet = false;
 
