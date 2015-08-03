@@ -4,7 +4,6 @@ require 'app.php';
 
 $dirName = isset($argv[1]) ? $argv[1] : false;
 
-
 if($dirName) {
 
 	$fileName = app::$snippetsDir . $dirName .'/body.src.php';
