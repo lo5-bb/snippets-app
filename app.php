@@ -1,5 +1,7 @@
 <?php
 
+include 'sample.php';
+
 class app {
 
 	public static $snippetsDir = './snippets/html/';
